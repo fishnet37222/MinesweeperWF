@@ -40,6 +40,7 @@ partial class MainWindow
 		this.m_intermediateToolStripMenuItem = new ToolStripMenuItem();
 		this.m_expertToolStripMenuItem = new ToolStripMenuItem();
 		this.m_customToolStripMenuItem = new ToolStripMenuItem();
+		this.m_btnNewGame = new Button();
 		menuStrip = new MenuStrip();
 		gameToolStripMenuItem = new ToolStripMenuItem();
 		helpToolStripMenuItem = new ToolStripMenuItem();
@@ -140,11 +141,25 @@ partial class MainWindow
 		exitToolStripMenuItem.Size = new Size(180, 22);
 		exitToolStripMenuItem.Text = "E&xit";
 		// 
+		// m_btnNewGame
+		// 
+		this.m_btnNewGame.Anchor = AnchorStyles.Top;
+		this.m_btnNewGame.AutoSize = true;
+		this.m_btnNewGame.AutoSizeMode = AutoSizeMode.GrowAndShrink;
+		this.m_btnNewGame.Image = Properties.Resources.Smile1;
+		this.m_btnNewGame.Location = new Point(378, 27);
+		this.m_btnNewGame.Name = "m_btnNewGame";
+		this.m_btnNewGame.Padding = new Padding(3);
+		this.m_btnNewGame.Size = new Size(44, 44);
+		this.m_btnNewGame.TabIndex = 1;
+		this.m_btnNewGame.UseVisualStyleBackColor = true;
+		// 
 		// MainWindow
 		// 
 		this.AutoScaleDimensions = new SizeF(7F, 15F);
 		this.AutoScaleMode = AutoScaleMode.Font;
 		this.ClientSize = new Size(800, 450);
+		this.Controls.Add(this.m_btnNewGame);
 		this.Controls.Add(menuStrip);
 		this.FormBorderStyle = FormBorderStyle.FixedSingle;
 		this.Icon = (Icon)resources.GetObject("$this.Icon");
@@ -164,4 +179,5 @@ partial class MainWindow
 	private ToolStripMenuItem m_intermediateToolStripMenuItem;
 	private ToolStripMenuItem m_expertToolStripMenuItem;
 	private ToolStripMenuItem m_customToolStripMenuItem;
+	private Button m_btnNewGame;
 }
