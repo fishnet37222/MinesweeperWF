@@ -38,5 +38,5 @@ public static class Program
 		File.WriteAllText(s_settingsFilePath!, s_settingsNode!.ToJsonString());
 	}
 
-	public static JsonNode GetSettingsNode() => s_settingsNode!;
+	public static JsonObject GetSettingsNode() => s_settingsNode!.AsObject();
 }
