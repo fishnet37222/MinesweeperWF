@@ -2,6 +2,7 @@
 //
 // SPDX-License-Identifier: Apache-2.0
 
+using System.Text.Json;
 using System.Text.Json.Nodes;
 
 namespace MinesweeperWF;
@@ -35,7 +36,7 @@ public static class Program
 	private static void Application_ApplicationExit(object? sender, EventArgs e)
 	{
 		Directory.CreateDirectory(Path.GetDirectoryName(s_settingsFilePath)!);
-		File.WriteAllText(s_settingsFilePath!, s_settingsNode!.ToJsonString());
+		File.WriteAllText(s_settingsFilePath!, s_settingsNode!.ToJsonString(new JsonSerializerOptions { WriteIndented = true }));
 	}
 
 	public static JsonObject GetSettingsNode() => s_settingsNode!.AsObject();
